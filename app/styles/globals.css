@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #__next {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html body #__next a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+html body #__next li {
+  list-style: none;
+}
