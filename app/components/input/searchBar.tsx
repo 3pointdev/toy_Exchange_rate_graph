@@ -3,16 +3,18 @@ import { useState } from "react";
 
 interface SearchBarProps {
   onSearch: (fromCurrency: string, toCurrency: string) => void;
+  list: any[];
 }
 
-export function SearchBar({ onSearch }: SearchBarProps) {
-  const [fromCurrency, setFromCurrency] = useState("");
-  const [toCurrency, setToCurrency] = useState("");
+export function SearchBar({ onSearch, list }: SearchBarProps) {
+  const [fromCurrency, setFromCurrency] = useState("KRW");
+  const [toCurrency, setToCurrency] = useState("USD");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSearch(fromCurrency, toCurrency);
   };
+  console.log();
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
